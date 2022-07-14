@@ -2,7 +2,7 @@ const { defineConfig } = require("@vue/cli-service");
 const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 module.exports = defineConfig({
   devServer: {
-    proxy: "https://code--duel.herokuapp.com/",
+    proxy: "https://plbattle-local.herokuapp.com/",
     clientLogLevel: "info",
   },
   transpileDependencies: ["vuetify"],

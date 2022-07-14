@@ -3,7 +3,7 @@ const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http, {
   cors: {
-    origin: "https://code--duel.herokuapp.com/",
+    origin: "https://plbattle-local.herokuapp.com/",
     methods: ["GET", "POST"],
   },
 });
