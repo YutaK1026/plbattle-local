@@ -37,9 +37,10 @@ if (process.env.NODE_ENV !== "production") {
   // app.get("/*", function(req, res) {
   //   res.sendFile(path.join(__dirname, "src/public","index.html"));
   // });
-  app.use(serveStatic(__dirname + "/dist"));
+  
   
 }
+app.use(serveStatic(__dirname + "/dist"));
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "/dist","index.html"));
 });
