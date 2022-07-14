@@ -32,11 +32,9 @@ if (process.env.NODE_ENV !== "production") {
       credentials: true,
       optionsSuccessStatus: 200,
     }),
-    express.static(__dirname + "/src")
+    express.static(__dirname + "/dist")
   );
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "src","index.html"));
-  });
+
   
   
 }
