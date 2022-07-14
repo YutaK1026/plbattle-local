@@ -32,18 +32,18 @@ if (process.env.NODE_ENV !== "production") {
       credentials: true,
       optionsSuccessStatus: 200,
     }),
-    //express.static("src/public")
+    express.static(__dirname + "/src")
   );
-  // app.get("/*", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "src/public","index.html"));
-  // });
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "src","index.html"));
+  });
   
   
 }
-app.use(serveStatic(__dirname + "/dist"));
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "/dist","index.html"));
-});
+// app.use(serveStatic(__dirname + "/dist"));
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "/dist","index.html"));
+// });
 
 let numClients = {};
 let numPlayer = {};
