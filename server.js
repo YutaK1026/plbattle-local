@@ -31,14 +31,13 @@ if (process.env.NODE_ENV !== "production") {
       origin: true,
       credentials: true,
       optionsSuccessStatus: 200,
-    }),
-    express.static(__dirname + "/dist")
+    })
   );
 
   
   
 }
-// app.use(serveStatic(__dirname + "/dist"));
+app.use(serveStatic(__dirname + "/test"));
 // app.get("*", function(req, res) {
 //   res.sendFile(path.join(__dirname, "/dist","index.html"));
 // });
