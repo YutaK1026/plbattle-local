@@ -4,6 +4,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: "https://plbattle-local.herokuapp.com/",
     clientLogLevel: "info",
+    historyApiFallback: true,
   },
   transpileDependencies: ["vuetify"],
   entry: "index.js",
